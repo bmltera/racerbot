@@ -1,0 +1,44 @@
+{
+    "cars": [
+        {
+            "name": "Nissan 350z",
+            "hp": 276
+        },
+        {
+            "name": "Nissan 370z",
+            "hp": 332
+        },
+        {
+            "name": "Toyota 86",
+            "hp": 200
+        },
+        {
+            "name": "Civic Type R",
+            "hp": 306
+        },
+        {
+            "name": "Maxda RX-7",
+            "hp": 276
+        },
+        {
+            "name": "BMW E46 M3",
+            "hp": 333
+        },
+        {
+            "name": "Subaru WRX",
+            "hp": 268
+        },
+        {
+            "name": "Subaru WRX STi",
+            "hp": 305
+        },
+        {
+            "name": "Toyota Supra 2.0",
+            "hp": 255
+        },
+        {
+            "name": "Toyota Supra 3.0",
+            "hp": 382
+        }
+]
+}
