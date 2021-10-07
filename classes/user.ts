@@ -12,6 +12,9 @@ export class Player {
     }
 
     addCar(car:Car){
+        if(this.cars.length == 0){
+            this.setCurrentCar(car);
+        }
         this.cars.push(car);
     }
 
@@ -31,7 +34,11 @@ export class Player {
         }
     }
 
-    setCurrenCar(car:Car){
+    setCurrentCar(car:Car){
         this.currentCar = car;
+    }
+
+    getCurrentCar(): Car{
+        return this.currentCar;
     }
 }

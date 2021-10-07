@@ -22,6 +22,22 @@ export class Car {
         this.condition -= this.stage;
     }
 
+    getName(){
+        return this.name;
+    }
+
+    getPower(){
+        return this.hp;
+    }
+
+    getStage(){
+        return this.stage;
+    }
+
+    getCondition(){
+        return this.condition;
+    }
+
 }
 
 // export class car350z extends Car{
