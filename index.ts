@@ -11,7 +11,7 @@ const client = new DiscordJS.Client({
         Intents.FLAGS.GUILD_MESSAGES
     ]
 })
-
+const mongoose = require("mongoose");
 let playerMap = new Map();
 let carList = require('./json_data/carlist.json');
 let help = require('./json_data/help.json');
@@ -34,6 +34,17 @@ for(const file of commandFiles){
 client.on('ready', () => {
     console.log('Logged in as ' + client!.user!.tag!)
     client.user!.setActivity("'r help'", {type: 'LISTENING'})
+
+    mongoose
+        .connect(process.env.MONGODB_SRV, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true        })
+        .then(()=>{
+            console.log("Connected to the database");
+        })
+        .catch((err: any) =>{
+            console.log(err);
+        })
 })
 
 // condition
