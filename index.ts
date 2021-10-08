@@ -13,8 +13,8 @@ const client = new DiscordJS.Client({
 })
 
 let playerMap = new Map();
-let carList = require('./jsonData/carlist.json');
-let help = require('./jsonData/help.json');
+let carList = require('./json_data/carlist.json');
+let help = require('./json_data/help.json');
 
 const Discord = require('discord.js')
 const token = process.env.TOKEN;
@@ -52,8 +52,8 @@ client.on("messageCreate", (message) => {
     else if(command === "stats"){
         commands.get('stats').execute(message, args);
     }
-    else if (command === "race"){
-
+    else if (command === "upgrade"){
+        commands.get('upgrade').execute(message, args);
     }
 })
 

@@ -2,7 +2,7 @@ import {playerMap} from "../index"
 
 (module).exports = {
     name: 'race',
-    description: "returns stats of current car",
+    description: "races 2 cars",
     
     execute(message :any , args:any){
         var id = message!.member!.id!;

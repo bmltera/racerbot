@@ -15,7 +15,7 @@ export class Car {
 
     upgrade(){
         this.stage++;
-        this.hp *= 1.12;
+        this.hp = Math.round(this.hp * 1.12);
     }
 
     wear(){
