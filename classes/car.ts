@@ -39,15 +39,3 @@ export class Car {
     }
 
 }
-
-// export class car350z extends Car{
-//     constructor(){
-//         super("Nissan 350z", 276)
-//     }
-
-// export class car350z extends Car{
-//     constructor(){
-//         super("Nissan 350z", 276)
-//     }
-// }
-
