@@ -52,17 +52,11 @@ client.on("messageCreate", (message) => {
     else if(command === "stats"){
         commands.get('stats').execute(message, args);
     }
-
     else if (command === "race"){
 
     }
 })
 
-// Load commands
-//client.loadCommands(client.config.paths.commands);
-// Load events
-//client.loadEvents(client.config.paths.events);
-
 client.login(token)     
 
-export{playerMap,carList};
+export{prefix, playerMap, carList};

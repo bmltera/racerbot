@@ -37,5 +37,4 @@ export class Car {
     getCondition(){
         return this.condition;
     }
-
 }

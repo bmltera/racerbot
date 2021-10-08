@@ -5,6 +5,7 @@ import {playerMap} from "../index"
     description: "returns stats of current car",
     execute(message :any , args:any){
         let isUsers = true;
+        
         if(args.length === 2){
             var id = message!.member!.id!;
         }
@@ -13,10 +14,8 @@ import {playerMap} from "../index"
             id = args[2]!.substring(2,args[2].length-2);
         }
 
-        console.log(id);
-        console.log(args);
         if(playerMap.get(id) == null || playerMap.get(id).getCurrentCar == null){
-            message.channel.send(((isUsers) ? "You do":"User does") + " not have a car selected")
+            message.channel.send(((isUsers) ? "You do":"User does") + " not have a car selected");
         }
         else{
             let user = playerMap.get(id);
