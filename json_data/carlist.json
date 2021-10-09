@@ -2,7 +2,7 @@
     "cars": [
         {
             "name": "Nissan 350z",
-            "hp": 276
+            "hp": 287
         },
         {
             "name": "Nissan 370z",
@@ -40,5 +40,5 @@
             "name": "Toyota Supra 3.0",
             "hp": 382
         }
-    ]
+     ]
 }
