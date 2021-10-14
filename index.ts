@@ -5,7 +5,7 @@ import {Player} from "./classes/user"
 
 dotenv.config();
 
-const client = new DiscordJS.Client({
+export const client = new DiscordJS.Client({
     intents: [
         Intents.FLAGS.GUILDS,
         Intents.FLAGS.GUILD_MESSAGES
@@ -15,13 +15,13 @@ const mongoose = require("mongoose");
 let playerMap = new Map();
 let carList = require('./json_data/carlist.json');
 let help = require('./json_data/help.json');
-
 const Discord = require('discord.js')
 const token = process.env.TOKEN;
 const prefix = 'r ';
 const fs = require('fs');
 
 // setup commands
+export let racer : Player;
 export let commands = new Map();
 const commandFiles = fs.readdirSync('./commands/');
 for(const file of commandFiles){
@@ -66,7 +66,15 @@ client.on("messageCreate", (message) => {
     else if (command === "upgrade"){
         commands.get('upgrade').execute(message, args);
     }
+    else if (command === "race"){
+        commands.get('race').execute(message, args);
+    }
 })
+
+// set current racing challenger
+export function setRacer(player:any){
+    racer = player;
+}
 
 client.login(token)     
 

@@ -1,14 +1,17 @@
 import { Car } from "./car"
+import { client } from "../index"
 
 export class Player {
-    name: string;
+    id: string;
+    username: string;
     cars: Car[];
     currentCar: Car;
 
-    constructor(name: string){
-        this.name = name;
+    constructor(id: string){
+        this.id = id;
         this.cars = [];
         this.currentCar = new Car("null", 0);
+        this.username = this.findUsername();
     }
 
     addCar(car:Car){
@@ -41,4 +44,13 @@ export class Player {
     getCurrentCar(): Car{
         return this.currentCar;
     }
+
+    findUsername(){
+        return client!.users!.cache!.get(this.id)!.username!;
+    }
+
+    getUsername(){
+        return this.username;
+    }
+
 }
