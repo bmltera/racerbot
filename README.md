@@ -9,4 +9,6 @@ https://discord.com/oauth2/authorize?client_id=895599436217061387&permissions=0&
 3. Save source code locally
 4. Create a new discord application and obtain token https://discord.com/developers/applications
 5. Create a file named ".env" at the root of the project, and add the line `TOKEN=<token>`, replacing `<token>` with your application token.
-6. In terminal run `ts-node .\index.ts` and start the bot!
+6. In terminal run `ts-node .\index.ts` and start the bot! <br><br>
+
+![image](https://github.com/bmltera/racerbot/blob/main/media/example1.png)
