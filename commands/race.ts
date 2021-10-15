@@ -27,8 +27,8 @@ import { setRacer, racer, playerMap} from "../index"
             let car1 = p1.getCurrentCar();
             let car2 = p2.getCurrentCar();
 
-            let p1react: number = Math.round(50 + Math.random() * 400)/1000;
-            let p2react: number = Math.round(50 + Math.random() * 400)/1000;
+            let p1react: number = Math.round( Math.random() * 300)/1000;
+            let p2react: number = Math.round( Math.random() * 300)/1000;
             let p1time : number = Math.round(6.29 * Math.pow(3000/car1.getPower(), 1/3) * 1000)/ 1000;
             let p2time : number = Math.round(6.29 * Math.pow(3000/car2.getPower(), 1/3) * 1000)/ 1000;
             let p1totaltime = p1react + p1time;
